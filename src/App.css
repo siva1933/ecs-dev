@@ -1,0 +1,148 @@
+:root {
+  --star-size: 20px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+}
+
+.Stars::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--percent),
+    var(--star-color) var(--percent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px 5px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+td {
+  padding: 15px 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+td.center,
+th.center {
+  text-align: center;
+}
+
+th.w10 {
+  width: 10%;
+}
+
+th.w20 {
+  width: 20%;
+}
+
+th.w30 {
+  width: 30%;
+}
+
+th.w40 {
+  width: 40%;
+}
+
+.w90 {
+  width: 90%;
+}
+
+.mAuto {
+  margin: auto;
+}
+
+.bgWhiteCard {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.tableWarpper {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.inlineBlock {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.inputWrapper input {
+  height: 36px;
+  width: 20rem;
+  padding: 5px;
+}
+
+.buttonWrap {
+  position: relative;
+}
+
+.buttonWrap button {
+  position: absolute;
+  top: -30px;
+  right: 50px;
+  width: 70px;
+  height: 35px;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.cart {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background-color: white;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.cart span {
+  display: inline-block;
+  padding: 5px;
+}
